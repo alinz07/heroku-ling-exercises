@@ -1,48 +1,27 @@
 {
-    "name": "react-port",
-    "version": "1.0.0",
-    "description": "Tony Linz Professional Portfolio",
-    "homepage": "http://alinz07.github.io/t-linz-web-engineer",
-    "scripts": {
-        "start": "react-scripts start",
-        "build": "react-scripts build",
-        "test": "react-scripts test",
-        "eject": "react-scripts eject",
-        "predeploy": "npm run build",
-        "deploy": "gh-pages -d build"
-    },
-    "eslintConfig": {
-        "extends": [
-            "react-app",
-            "react-app/jest"
-        ]
-    },
-    "browserslist": {
-        "production": [
-            ">0.2%",
-            "not dead",
-            "not op_mini all"
-        ],
-        "development": [
-            "last 1 chrome version",
-            "last 1 firefox version",
-            "last 1 safari version"
-        ]
-    },
-    "dependencies": {
-        "@emotion/react": "^11.9.0",
-        "@emotion/styled": "^11.8.1",
-        "@mui/icons-material": "^5.6.2",
-        "@mui/material": "^5.6.1",
-        "cra-template": "^1.2.0",
-        "react": "^18.0.0",
-        "react-dom": "^18.0.0",
-        "react-scripts": "^5.0.1"
-    },
-    "devDependencies": {
-        "@testing-library/jest-dom": "^5.16.4",
-        "@testing-library/react": "^13.1.1",
-        "gh-pages": "^3.2.3",
-        "web-vitals": "^2.1.4"
-    }
+	"name": "ling-exercises",
+	"version": "1.0.0",
+	"description": "",
+	"main": "server/server.js",
+	"scripts": {
+		"start": "node server/server.js",
+		"develop": "concurrently \"cd server && npm run watch\" \"cd client && npm start\"",
+		"install": "cd server && npm i && cd ../client && npm i",
+		"seed": "cd server && npm run seed",
+		"build": "cd client && npm run build"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/alinz07/ling-exercises.git"
+	},
+	"author": "",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/alinz07/ling-exercises/issues"
+	},
+	"homepage": "https://github.com/alinz07/ling-exercises#readme",
+	"devDependencies": {
+		"concurrently": "^7.1.0",
+		"cross-env": "^7.0.3"
+	}
 }

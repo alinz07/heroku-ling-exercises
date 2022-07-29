@@ -9,7 +9,7 @@ function Nav(props) {
 	const {
 		navOptions = [
 			{
-				name: "About me",
+				name: "Daily Exercises",
 				arrow: <ArrowBackOutlinedIcon id="eyecon" />,
 				miles: " 0.1 MI",
 			},

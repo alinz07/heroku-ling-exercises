@@ -1,4 +1,6 @@
-# React Portfolio
+# Ling Exercises
+
+remember to put jwt in .env
 
 <br/>
 

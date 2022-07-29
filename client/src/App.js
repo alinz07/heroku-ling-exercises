@@ -10,9 +10,9 @@ import { Grid } from "@mui/material";
 function App() {
 	const [contactSelected, setContactSelected] = useState(false);
 	const [navOptions] = useState([
-		{ name: "About me" },
+		{ name: "Daily Exercises" },
 		{ name: "Portfolio" },
-		{ name: "Contact" },
+		{ name: "Login" },
 		{ name: "Students" },
 	]);
 	const [currentNav, setCurrentNav] = useState(navOptions[0]);
@@ -29,7 +29,7 @@ function App() {
 				></Header>
 			</Grid>
 			<Grid item xs={12}>
-				{currentNav.name === "About me" && <About></About>}
+				{currentNav.name === "Daily Exercises" && <About></About>}
 				{currentNav.name === "Portfolio" && <Project></Project>}
 				{currentNav.name === "Contact" && (
 					<Contact

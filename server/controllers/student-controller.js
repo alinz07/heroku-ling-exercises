@@ -1,8 +1,16 @@
 const { Student } = require("../models");
+const { signToken } = require("../utils/auth");
+
 const studentController = {
 	createStudent({ body }, res) {
 		Student.create(body)
-			.then((dbStudentData) => res.json(dbStudentData))
+			.then((dbStudentData) => {
+				const initials = dbStudentData.initials;
+				const parent_email = dbStudentData.parent_email;
+				const id = dbStudentData._id;
+				const token = signToken(initials, parent_email, id);
+				res.json(token);
+			})
 			.catch((err) => res.status(400).json(err));
 	},
 	getAllStudents(req, res) {
